@@ -1,0 +1,122 @@
+---
+import logoIglesia from "../assets/logo-transparente.png";
+import { Image } from "astro:assets";
+import Line from "../assets/lines.svg";
+import buttonX from "../assets/button-x.svg";
+---
+
+<header class="bg-black px-10 py-4 text-white font-sora">
+  <nav class="flex justify-between items-center">
+    <ul class="flex items-center justify-center">
+      <Image src={logoIglesia} alt="logoIglesia_CasadeVida" width={120} />
+    </ul>
+    <ul>
+      <button class="lg:hidden" id="menu-button">
+        <img
+          id="menu-icon"
+          class="flex justify-center items-center transition-transform duration-300"
+          src={Line.src}
+          alt="button-lines"
+        />
+        <img
+          id="close-icon"
+          class="hidden transition-transform duration-300"
+          src={buttonX.src}
+          alt="button-x"
+        />
+      </button>
+    </ul>
+    <ul class="hidden lg:flex items-center gap-x-10">
+      <li class="group relative w-max">
+        <a href="">INICIO</a>
+        <span
+          class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+      </li>
+      <li class="group relative w-max">
+        <a href="">NOSOTROS</a><span
+          class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+      </li>
+      <li class="group relative w-max">
+        <a href="">CREENCIAS</a><span
+          class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+      </li>
+      <li class="group relative w-max">
+        <a href="">NUESTRO PASTOR</a>
+        <span
+          class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+      </li>
+      <li class="group relative w-max">
+        <a href="">REUNIONES</a><span
+          class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+      </li>
+      <li class="group relative w-max">
+        <a href="">¡ÚNETE!</a><span
+          class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-white group-hover:w-3/6"
+        ></span>
+      </li>
+    </ul>
+    <ul
+      id="menu-open"
+      class="lg:hidden bg-[#000000] bg-opacity-75 rounded-xl p-5 fixed right-10 top-28 hidden"
+    >
+      <div class="flex flex-col justify-center items-end gap-y-3">
+        <li><a href="/">INICIO</a></li>
+        <li><a href="/nosotros">NOSOTROS</a></li>
+        <li><a href="/creencias">CREENCIAS</a></li>
+        <li><a href="/pastor">NUESTRO PASTOR</a></li>
+        <li><a href="/reuniones">REUNIONES</a></li>
+        <li><a href="/unete">¡ÚNETE!</a></li>
+      </div>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const button = document.querySelector("#menu-button");
+  const menuOpen = document.querySelector("#menu-open");
+  const menuIcon = document.querySelector("#menu-icon");
+  const closeIcon = document.querySelector("#close-icon");
+
+  button.addEventListener("click", () => {
+    const isHidden = menuOpen.classList.contains("hidden");
+
+    menuOpen.classList.toggle("hidden");
+    menuOpen.classList.toggle("animate-fade-in", isHidden);
+    menuOpen.classList.toggle("animate-fade-out", !isHidden);
+
+    menuIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+
+    // Añadir y quitar la clase de animación para ambos íconos
+    menuIcon.classList.add("animate-jump");
+    closeIcon.classList.add("animate-jump");
+
+    setTimeout(() => {
+      menuIcon.classList.remove("animate-jump");
+      closeIcon.classList.remove("animate-jump");
+    }, 300);
+  });
+</script>

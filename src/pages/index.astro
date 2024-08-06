@@ -1,0 +1,23 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Madrid from "../assets/madrid-oscuro.png";
+import Footer from "../components/Footer.astro";
+import Social from "../components/Social.astro";
+---
+
+<Layout title="Iglesia Casa de Vida">
+  <Header />
+  <main>
+    <img src={Madrid.src} />
+    <Social />
+  </main>
+  <Footer
+    titleDireccion={"Ubícanos"}
+    titleEmail={"Contáctanos"}
+    direccion={"C. Torres de la Alameda, 2, 28806 Alcalá de Henares, Madrid"}
+    email={"informes@iacym-casadevida.com"}
+  />
+</Layout>
+
+<style></style>
