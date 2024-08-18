@@ -1,0 +1,36 @@
+---
+import Madrid from "../assets/madrid-oscuro.png";
+import Social from "../components/Social.astro";
+---
+
+<main>
+  <div class="parallax-section h-screen relative">
+    <div
+      class="parallax-overlay absolute inset-0 flex flex-col items-center justify-center text-white text-center text-balance xl:px-96 px-10"
+    >
+      <h1 class="sm:text-5xl text-3xl font-bold">BIENVENIDO A CASA DE VIDA</h1>
+      <p class="mt-4 sm:text-2xl text-xl text-pretty">
+        Tenemos una <span class="font-bold">CELEBRACIÓN</span> enfocada en Jesús
+        que te aseguro que no te dejará igual. Acompáñanos y disfruta de un tiempo
+        con Dios.
+      </p>
+      <button
+        class="mt-6 px-8 py-3 bg-white text-black rounded-2xl font-semibold"
+        >Saber más</button
+      >
+    </div>
+  </div>
+</main>
+
+<style>
+  .parallax-section {
+    background-image: url("/src/assets/madrid_2.jpg"); /* Ruta de tu imagen */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Filtro black */
+  }
+</style>
