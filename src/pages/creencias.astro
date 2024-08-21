@@ -1,21 +1,29 @@
 ---
 import Card from "../components/Card.astro";
+import blessIcon from "../assets/bless-svgrepo-com.svg";
+import crossIcon from "../assets/cross-svgrepo-com.svg";
+import familyIcon from "../assets/familyIcon.svg";
 ---
 
 <section
-  class="bg-white py-28 px-5 flex flex-col justify-center items-center gap-y-24"
+  class="bg-white py-28 px-5 flex flex-col justify-center items-center gap-y-20"
 >
-  <h1 class="text-5xl text-center font-extrabold">¿EN QUÉ CREÉMOS?</h1>
+  <h1 class="text-5xl text-center font-extrabold text-[#141414]">
+    ¿EN QUÉ CREÉMOS?
+  </h1>
   <div class="lg:flex xl:gap-x-10 gap-x-5">
     <Card
+      imageImport={blessIcon}
       titleCard={"DIOS"}
       descriptionCard={"Reconocemos que hay un solo Dios vivo y verdadero, que existe en tres personas: Padre, Jesucristo Hijo y Espíritu Santo, pero sin división de naturaleza, esencia o ser."}
     />
     <Card
+      imageImport={crossIcon}
       titleCard={"ORACIÓN"}
       descriptionCard={"Buscaremos intencionalmente reservar momentos específicos para la oración privada, familiar y corporativa."}
     />
     <Card
+      imageImport={familyIcon}
       titleCard={"FAMILIA"}
       descriptionCard={"Alentamos compromisos de por vida con el matrimonio entre un hombre y una mujer y apoyamos la educación espiritual continua de la familia."}
     />

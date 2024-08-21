@@ -10,18 +10,18 @@ const { titleDireccion, titleEmail, direccion, email } = Astro.props;
 ---
 
 <footer
-  class="bg-black h-[550px] md:flex justify-center items-center text-center md:text-start lg:4gap-x-1 gap-x-7 py-14 px-20"
+  class="bg-[#004688] h-[550px] md:flex justify-center items-center text-center md:text-start lg:4gap-x-1 gap-x-7 py-14 px-20"
 >
   <div class="flex flex-col justify-center items-center w-full md:mb-0 mb-6">
     <h1 class="text-white md:text-3xl text-xl mb-5">{titleEmail}</h1>
-    <p class="text-[#b8b8b8] md:text-[20px] text-[16px] text-center leading-7">
+    <p class="text-white md:text-[20px] text-[16px] text-center leading-7">
       {email}
     </p>
   </div>
   <div class="flex flex-col items-center w-full">
     <h1 class="text-white md:text-3xl text-xl mb-5">{titleDireccion}</h1>
     <p
-      class="text-[#b8b8b8] md:text-[20px] text-[16px] text-center leading-7 px-5 md:px-0"
+      class="text-white md:text-[20px] text-[16px] text-center leading-7 px-5 md:px-0"
     >
       {direccion}
     </p>

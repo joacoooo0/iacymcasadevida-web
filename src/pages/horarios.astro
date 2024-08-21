@@ -1,0 +1,26 @@
+---
+import CardHorario from "../components/cardHorario.astro";
+import imageFamily from "../assets/familyexample.jpg";
+import imageFamily2 from "../assets/familyexample2.jpg";
+---
+
+<div class="flex flex-col justify-center items-center text-[#141414] py-20">
+  <h1 class="text-[45px] font-extrabold mb-[31px]">HORARIOS Y REUNIONES</h1>
+  <h3 class="text-[21px] mb-[75px] font-semibold">
+    ¡Llega temprano para que no te pierdas de nada!
+  </h3>
+  <div class="flex gap-x-[73px]">
+    <CardHorario
+      imageExample={imageFamily}
+      titleCard={"REUNIÓN GENERAL"}
+      horaCard={"00:00 - 00:00"}
+      direccionCard={"C. Torres de la Alameda, 2, 28806 Alcalá de Henares, Madrid"}
+    />
+    <CardHorario
+      imageExample={imageFamily2}
+      titleCard={"REUNIÓN GENERAL"}
+      horaCard={"00:00 - 00:00"}
+      direccionCard={"C. Torres de la Alameda, 2, 28806 Alcalá de Henares, Madrid"}
+    />
+  </div>
+</div>
