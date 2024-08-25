@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -6,13 +7,59 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Iglesia Casa de Vida">
   <Header />
   <main
-    class="flex flex-col justify-center items-center bg-black w-full h-full text-white"
+    class="flex flex-col justify-center items-center bg-white text-white gap-y-14 py-32"
   >
-    <div class="">
-      <h1 class="bg-orange-800 text-5xl font-bold flex justify-center">
-        Videos
-      </h1>
-      <h2>is comming...</h2>
-    </div>
+    <h1 class="text-[#141414] text-6xl font-bold mb-10">
+      Casa de vida en línea
+    </h1>
+    <a
+      href="https://www.youtube.com/"
+      <div
+      class="parallax-section w-[1400px] h-72"
+    >
+      <div class="parallax-overlay h-72 flex items-center justify-center">
+        <h1 class="text-white font-bold text-6xl">Predicaciones</h1>
+      </div>
+    </a>
+    <a
+      href="https://www.youtube.com/"
+      <div
+      class="parallax-section w-[1400px] h-72"
+    >
+      <div class="parallax-overlay h-72 flex items-center justify-center">
+        <h1 class="text-white font-bold text-6xl">Escuela bíblica</h1>
+      </div>
+    </a>
+    <a
+      href="https://www.youtube.com/"
+      <div
+      class="parallax-section w-[1400px] h-72"
+    >
+      <div class="parallax-overlay h-72 flex items-center justify-center">
+        <h1 class="text-white font-bold text-6xl">Teología</h1>
+      </div>
+    </a>
+    <a
+      href="https://www.youtube.com/"
+      <div
+      class="parallax-section w-[1400px] h-72"
+    >
+      <div class="parallax-overlay h-72 flex items-center justify-center">
+        <h1 class="text-white font-bold text-6xl">Evangelismo</h1>
+      </div>
+    </a>
   </main>
+  <Footer />
 </Layout>
+
+<style>
+  .parallax-section {
+    background-image: url("/src/assets/dar-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax-overlay {
+    background: rgba(0, 0, 0, 0.435);
+  }
+</style>
