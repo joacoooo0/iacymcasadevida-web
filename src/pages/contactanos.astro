@@ -1,18 +1,70 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+
+import emailIcon from "../assets/email-contact.svg";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Iglesia Casa de Vida">
   <Header />
-  <main
-    class="flex flex-col justify-center items-center bg-black w-full h-full text-white"
-  >
-    <div class="">
-      <h1 class="bg-orange-800 text-5xl font-bold flex justify-center">
-        Contáctanos
-      </h1>
-      <h2>is comming...</h2>
+  <main class="bg-white h-full p-10 flex items-center justify-center">
+    <div class="flex items-center justify-center gap-x-36">
+      <div class="w-auto">
+        <div class="">
+          <Image src={emailIcon} alt="email-icon" class="w-14" />
+          <h1 class="text-3xl font-extrabold text-[#141414] mt-5">
+            Contáctanos
+          </h1>
+        </div>
+        <div class="flex flex-col w-full gap-y-2 mt-5">
+          <h2 class="font-semibold text-[#141414]">Nombres</h2>
+          <input
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[34px] rounded-md p-2"
+            type="text"
+          />
+          <h2 class="font-semibold text-[#141414]">Apellidos</h2>
+          <input
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[34px] rounded-md p-2"
+            type="text"
+          />
+          <h2 class="font-semibold text-[#141414]">Correo electrónico</h2>
+          <input
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[34px] rounded-md p-2"
+            type="text"
+          />
+          <h2 class="font-semibold text-[#141414]">Mensaje</h2>
+          <textarea
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[130px] rounded-md p-2 resize-none"
+          ></textarea>
+          <button
+            class="bg-[#0059AD] text-white font-semibold rounded-md w-28 h-10 mt-6"
+            >Enviar</button
+          >
+        </div>
+      </div>
+      <div class="font-medium flex flex-col items-start w-80">
+        <div class="font-medium flex flex-col items-start w-80">
+          <div class="relative pl-4">
+            <!-- Borde redondeado -->
+            <div
+              class="absolute left-0 top-0 h-full w-1.5 bg-[#0059AD] rounded-lg"
+            >
+            </div>
+            <div class="pl-4">
+              <p class="text-[#141414]">
+                "Muchas gracias por contactarnos. Es nuestro deseo servirte de
+                la mejor manera que podamos. Pronto estaremos en contacto
+                contigo. Si tienes tiempo visita nuestro sitio si quieres saber
+                mas acerca de nosotros"
+              </p>
+              <p class="text-[#141414]">Ps. Angelo Oncoy</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+  <Footer />
 </Layout>
