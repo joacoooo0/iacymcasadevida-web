@@ -1,18 +1,90 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import userIcon from "../assets/user-example.jpg";
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Iglesia Casa de Vida">
   <Header />
   <main
-    class="flex flex-col justify-center items-center bg-black w-full h-full text-white"
+    class="flex flex-col justify-center items-center bg-white text-white p-10"
   >
-    <div class="">
-      <h1 class="bg-orange-800 text-5xl font-bold flex justify-center">
-        Equipo
-      </h1>
-      <h2>is comming...</h2>
+    <div>
+      <div
+        class="text-[#141414] flex items-center justify-center w-full gap-x-10 my-28"
+      >
+        <Image src={userIcon} alt="user-icon" class="w-[550px] rounded-2xl" />
+        <section>
+          <h1 class="text-7xl font-bold">Angelo y Aida</h1>
+          <h3 class="text-2xl italic mt-4">Pastores fundadores</h3>
+          <p class="w-[450px] mt-4">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable. If you are going to use a passage of Lorem
+          </p>
+        </section>
+      </div>
+      <div class="inline-flex items-center justify-center w-full">
+        <hr
+          class="w-[1600px] h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+        />
+        <span
+          class="absolute px-3 font-extrabold text-[#141414] -translate-x-1/2 left-1/2 bg-white text-3xl"
+          >EQUIPO</span
+        >
+      </div>
+      <div class="mt-10">
+        <div class="flex items-center justify-center gap-x-10 mb-5">
+          <div
+            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
+          >
+            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+            <h3 class="">Nombre y apellido</h3>
+          </div>
+          <div
+            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
+          >
+            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+            <h3 class="">Nombre y apellido</h3>
+          </div>
+          <div
+            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
+          >
+            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+            <h3 class="">Nombre y apellido</h3>
+          </div>
+        </div>
+        <div class="flex items-center justify-center gap-x-10">
+          <div
+            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
+          >
+            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+            <h3 class="">Nombre y apellido</h3>
+          </div>
+          <div
+            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
+          >
+            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+            <h3 class="">Nombre y apellido</h3>
+          </div>
+          <div
+            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
+          >
+            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+            <h3 class="">Nombre y apellido</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+  <Footer />
 </Layout>
