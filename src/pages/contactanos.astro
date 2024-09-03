@@ -9,9 +9,9 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="Iglesia Casa de Vida">
   <Header />
-  <main class="bg-white h-full p-10 flex items-center justify-center">
-    <div class="flex items-center justify-center gap-x-36">
-      <div class="w-auto">
+  <main class="bg-white flex items-center justify-center py-32">
+    <div class="md:flex items-center justify-center gap-x-28">
+      <div class="w-auto flex flex-col px-3">
         <div class="">
           <Image src={emailIcon} alt="email-icon" class="w-14" />
           <h1 class="text-3xl font-extrabold text-[#141414] mt-5">
@@ -19,24 +19,24 @@ import Footer from "../components/Footer.astro";
           </h1>
         </div>
         <div class="flex flex-col w-full gap-y-2 mt-5">
-          <h2 class="font-semibold text-[#141414]">Nombres</h2>
+          <h2 class="font-semibold text-[#141414] min-h-full">Nombres</h2>
           <input
-            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[34px] rounded-md p-2"
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] md:w-[299px] w-[280px] h-[34px] rounded-md p-2"
             type="text"
           />
           <h2 class="font-semibold text-[#141414]">Apellidos</h2>
           <input
-            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[34px] rounded-md p-2"
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] md:w-[299px] w-[280px] h-[34px] rounded-md p-2"
             type="text"
           />
           <h2 class="font-semibold text-[#141414]">Correo electrónico</h2>
           <input
-            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[34px] rounded-md p-2"
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] md:w-[299px] w-[280px] h-[34px] rounded-md p-2"
             type="text"
           />
           <h2 class="font-semibold text-[#141414]">Mensaje</h2>
           <textarea
-            class="bg-[#0059AD] bg-opacity-10 text-[#141414] w-[299px] h-[130px] rounded-md p-2 resize-none"
+            class="bg-[#0059AD] bg-opacity-10 text-[#141414] md:w-[299px] w-[280px] h-[130px] rounded-md p-2 resize-none"
           ></textarea>
           <button
             class="bg-[#0059AD] text-white font-semibold rounded-md w-28 h-10 mt-6"
@@ -44,7 +44,7 @@ import Footer from "../components/Footer.astro";
           >
         </div>
       </div>
-      <div class="font-medium flex flex-col items-start w-80">
+      <div class="font-medium flex flex-col items-start w-full md:pt-0 pt-16">
         <div class="font-medium flex flex-col items-start w-80">
           <div class="relative pl-4">
             <!-- Borde redondeado -->
@@ -53,25 +53,22 @@ import Footer from "../components/Footer.astro";
             >
             </div>
             <div class="pl-4">
-              <p class="text-[#141414]">
+              <p class="text-[#141414] md:text-[16px] text-[14px]">
                 "Muchas gracias por contactarnos. Es nuestro deseo servirte de
                 la mejor manera que podamos. Pronto estaremos en contacto
                 contigo. Si tienes tiempo visita nuestro sitio si quieres saber
                 mas acerca de nosotros"
               </p>
-              <p class="text-[#141414] mt-4 font-bold">Ps. Angelo Oncoy</p>
+              <p
+                class="text-[#141414] md:text-[16px] text-[14px] mt-4 font-bold"
+              >
+                Ps. Angelo Oncoy
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <!-- <iframe
-    style="border:none;width:100%;"
-    id="church-contact-wjbn4r"
-    src="https://opnform.com/forms/church-contact-wjbn4r"></iframe><script
-    type="text/javascript"
-    onload="initEmbed('church-contact-wjbn4r')"
-    src="https://opnform.com/widgets/iframe.min.js"></script> -->
   <Footer />
 </Layout>
