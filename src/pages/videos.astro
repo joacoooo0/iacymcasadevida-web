@@ -7,49 +7,51 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Iglesia Casa de Vida">
   <Header />
   <main
-    class="flex flex-col justify-center items-center bg-white text-white gap-y-14 py-32"
+    class="flex flex-col justify-center items-center bg-white text-white gap-y-14 py-32 px-5"
   >
-    <h1 class="text-[#141414] text-6xl font-bold mb-10">
+    <h1 class="text-[#141414] lg:text-6xl text-5xl text-center font-bold mb-10">
       Casa de vida en línea
     </h1>
     <a
       target="_blank"
       href="https://www.youtube.com/"
       <div
-      class="parallax-section w-[1400px] h-72"
+      class="parallax-section lg:w-[1000px] w-full h-72"
     >
       <div class="parallax-overlay h-72 flex items-center justify-center">
-        <h1 class="text-white font-bold text-6xl">Predicaciones</h1>
+        <h1 class="text-white font-bold lg:text-6xl text-3xl">Predicaciones</h1>
       </div>
     </a>
     <a
       target="_blank"
       href="https://www.youtube.com/"
       <div
-      class="parallax-section w-[1400px] h-72"
+      class="parallax-section lg:w-[1000px] w-full h-72"
     >
       <div class="parallax-overlay h-72 flex items-center justify-center">
-        <h1 class="text-white font-bold text-6xl">Escuela bíblica</h1>
+        <h1 class="text-white font-bold lg:text-6xl text-3xl">
+          Escuela bíblica
+        </h1>
       </div>
     </a>
     <a
       target="_blank"
       href="https://www.youtube.com/"
       <div
-      class="parallax-section w-[1400px] h-72"
+      class="parallax-section lg:w-[1000px] w-full h-72"
     >
       <div class="parallax-overlay h-72 flex items-center justify-center">
-        <h1 class="text-white font-bold text-6xl">Teología</h1>
+        <h1 class="text-white font-bold lg:text-6xl text-3xl">Teología</h1>
       </div>
     </a>
     <a
       target="_blank"
       href="https://www.youtube.com/"
       <div
-      class="parallax-section w-[1400px] h-72"
+      class="parallax-section lg:w-[1000px] w-full h-72"
     >
       <div class="parallax-overlay h-72 flex items-center justify-center">
-        <h1 class="text-white font-bold text-6xl">Evangelismo</h1>
+        <h1 class="text-white font-bold lg:text-6xl text-3xl">Evangelismo</h1>
       </div>
     </a>
   </main>
@@ -62,6 +64,7 @@ import Layout from "../layouts/Layout.astro";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-inline: 3px;
   }
   .parallax-overlay {
     background: rgba(0, 0, 0, 0.435);
