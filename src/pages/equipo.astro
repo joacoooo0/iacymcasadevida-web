@@ -9,82 +9,94 @@ import Footer from "../components/Footer.astro";
 <Layout title="Iglesia Casa de Vida">
   <Header />
   <main
-    class="flex flex-col justify-center items-center bg-white text-white p-10"
+    class="flex flex-col justify-center items-center bg-white text-white py-20"
   >
     <div>
       <div
-        class="text-[#141414] flex items-center justify-center w-full gap-x-10 my-28"
+        class="text-[#141414] md:flex items-center md:justify-center gap-x-10"
       >
-        <Image src={userIcon} alt="user-icon" class="w-[550px] rounded-2xl" />
-        <section>
-          <h1 class="text-7xl font-bold">Angelo y Aida</h1>
-          <h3 class="text-[18px] mt-6 italic">Pastores fundadores</h3>
-          <p class="w-[450px] mt-4 text-[#141414]">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem
-          </p>
+        <div class="flex items-center justify-center">
+          <Image
+            src={userIcon}
+            alt="user-icon"
+            class="lg:w-[440px] w-[250px] rounded-2xl"
+          />
+        </div>
+        <section class="text-center md:text-start">
+          <h1 class="lg:text-7xl text-3xl font-bold mt-6 md:mt-0">
+            Angelo y Aida
+          </h1>
+          <h3 class="lg:text-[18px] text-[13px] lg:mt-6 mt-3 italic">
+            Pastores fundadores
+          </h3>
+          <div class="flex items-center justify-center lg:w-[500px] w-[300px]">
+            <p class="lg:mt-4 mt-2 lg:text-[16px] text-[12px] text-[#141414]">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+            </p>
+          </div>
         </section>
       </div>
-      <div class="inline-flex items-center justify-center w-full">
-        <hr
-          class="w-[1600px] h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
-        />
-        <span
-          class="absolute px-3 font-extrabold text-[#141414] -translate-x-1/2 left-1/2 bg-white text-3xl"
-          >EQUIPO</span
+    </div>
+
+    <div class="inline-flex items-center justify-center w-full py-16">
+      <hr class="w-[500px] h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <span
+        class="absolute px-3 font-extrabold text-[#141414] -translate-x-1/2 left-1/2 bg-white text-3xl"
+        >EQUIPO</span
+      >
+    </div>
+    <div class="grid align-middle">
+      <!-- Ajuste de clases para el grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 content-stretch place-items-center"
+      >
+        <div
+          class="lg:w-[300px] w-[200px] h-full flex flex-col items-center justify-center text-[#141414]"
         >
-      </div>
-      <div class="mt-10">
-        <div class="flex items-center justify-center gap-x-10 mb-5">
-          <div
-            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
-          >
-            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
-            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
-            <h3 class="">Nombre y apellido</h3>
-          </div>
-          <div
-            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
-          >
-            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
-            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
-            <h3 class="">Nombre y apellido</h3>
-          </div>
-          <div
-            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
-          >
-            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
-            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
-            <h3 class="">Nombre y apellido</h3>
-          </div>
+          <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+          <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+          <h3>Nombre y apellido</h3>
         </div>
-        <div class="flex items-center justify-center gap-x-10">
-          <div
-            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
-          >
-            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
-            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
-            <h3 class="">Nombre y apellido</h3>
-          </div>
-          <div
-            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
-          >
-            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
-            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
-            <h3 class="">Nombre y apellido</h3>
-          </div>
-          <div
-            class="w-[500px] h-full p-5 flex flex-col items-center justify-center text-[#141414]"
-          >
-            <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
-            <h1 class="text-2xl font-bold pt-5">Equipo</h1>
-            <h3 class="">Nombre y apellido</h3>
-          </div>
+        <div
+          class="lg:w-[300px] w-[200px] h-full flex flex-col items-center justify-center text-[#141414]"
+        >
+          <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+          <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+          <h3>Nombre y apellido</h3>
+        </div>
+        <div
+          class="lg:w-[300px] w-[200px] h-full flex flex-col items-center justify-center text-[#141414]"
+        >
+          <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+          <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+          <h3>Nombre y apellido</h3>
+        </div>
+        <div
+          class="lg:w-[300px] w-[200px] h-full flex flex-col items-center justify-center text-[#141414]"
+        >
+          <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+          <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+          <h3>Nombre y apellido</h3>
+        </div>
+        <div
+          class="lg:w-[300px] w-[200px] h-full flex flex-col items-center justify-center text-[#141414]"
+        >
+          <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+          <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+          <h3>Nombre y apellido</h3>
+        </div>
+        <div
+          class="lg:w-[300px] w-[200px] h-full flex flex-col items-center justify-center text-[#141414]"
+        >
+          <Image src={userIcon} alt="user-icon-team" class="rounded-2xl" />
+          <h1 class="text-2xl font-bold pt-5">Equipo</h1>
+          <h3>Nombre y apellido</h3>
         </div>
       </div>
     </div>
   </main>
-  <Footer />
 </Layout>
+<Footer />
